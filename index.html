@@ -24,7 +24,6 @@
     <symbol id="icon-spark" viewBox="0 0 32 32"><path d="m16 4 3 9 9 3-9 3-3 9-3-9-9-3 9-3ZM26 3v6m-3-3h6"/></symbol>
     <symbol id="icon-heart" viewBox="0 0 32 32"><path d="M16 27 5 16C-2 7 10 0 16 9c6-9 18-2 11 7Z"/></symbol>
     <symbol id="icon-flower" viewBox="0 0 32 32"><path d="M16 26C5 25 3 19 4 12c6-1 10 2 12 7 2-5 6-8 12-7 1 7-1 13-12 14Zm0 0V14m0 5C9 13 11 7 16 3c5 4 7 10 0 16Z"/></symbol>
-    <symbol id="icon-image" viewBox="0 0 48 48"><rect x="6" y="7" width="36" height="34" rx="4"/><circle cx="17" cy="18" r="4"/><path d="m7 35 10-10 8 8 7-12 10 14"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -59,14 +58,11 @@
             <a class="button button-secondary" href="#idopontkeres">Időpontot kérek</a>
           </div>
         </div>
-        <figure class="image-placeholder hero-image" aria-labelledby="hero-image-caption">
-          <div class="placeholder-ornament" aria-hidden="true"></div>
-          <div class="placeholder-content">
-            <svg class="placeholder-icon" aria-hidden="true"><use href="#icon-image"/></svg>
-            <span class="kicker">Ideiglenes képhely · 4:5</span>
-            <figcaption id="hero-image-caption">Kozmetikai arckezelés<span>Meleg, természetes fény, finom kézmozdulatok, krém és bézs környezet.</span></figcaption>
-          </div>
-          <span class="placeholder-index" aria-hidden="true">01 / KÉPHELY</span>
+        <figure class="editorial-image hero-image">
+          <picture>
+            <source type="image/webp" srcset="assets/images/kozmetikai-arcmasszazs-480.webp 480w, assets/images/kozmetikai-arcmasszazs-800.webp 800w, assets/images/kozmetikai-arcmasszazs-1200.webp 1200w" sizes="(min-width: 1264px) 541px, (min-width: 1024px) calc(47.62vw - 60.95px), (min-width: 768px) calc(47.62vw - 45.71px), calc(100vw - 40px)">
+            <img src="assets/images/kozmetikai-arcmasszazs-800.webp" alt="Kozmetikus finom kézmozdulatokkal masszírozza egy csukott szemmel pihenő vendég arcát." width="1200" height="1500" loading="eager" fetchpriority="high" decoding="async">
+          </picture>
         </figure>
       </div>
     </section>
@@ -125,14 +121,11 @@
 
     <section class="section about-section" aria-labelledby="about-title">
       <div class="container about-grid">
-        <figure class="image-placeholder about-image" aria-labelledby="about-image-caption">
-          <div class="placeholder-ornament" aria-hidden="true"></div>
-          <div class="placeholder-content">
-            <svg class="placeholder-icon" aria-hidden="true"><use href="#icon-image"/></svg>
-            <span class="kicker">Ideiglenes képhely · 4:5</span>
-            <figcaption id="about-image-caption">Személyes törődés<span>Kezelési részlet vagy bőrápolási csendélet. Később Eliza saját portréja kerülhet ide.</span></figcaption>
-          </div>
-          <span class="placeholder-index" aria-hidden="true">02 / KÉPHELY</span>
+        <figure class="editorial-image about-image">
+          <picture>
+            <source type="image/webp" srcset="assets/images/borapolo-krem-480.webp 480w, assets/images/borapolo-krem-800.webp 800w, assets/images/borapolo-krem-1200.webp 1200w" sizes="(min-width: 1264px) 541px, (min-width: 1024px) calc(47.62vw - 60.95px), (min-width: 768px) calc(45vw - 43.2px), calc(100vw - 40px)">
+            <img src="assets/images/borapolo-krem-800.webp" alt="Két kéz egy fehér bőrápoló krémtégelyt tart meleg bézs háttér előtt." width="1200" height="1500" loading="lazy" decoding="async">
+          </picture>
         </figure>
         <div class="about-copy">
           <h2 id="about-title">Ismerd meg a szakértődet!</h2>
