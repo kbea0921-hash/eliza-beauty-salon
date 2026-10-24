@@ -193,7 +193,12 @@ textarea { resize: vertical; min-height: 128px; }
   .hero-image { width: 100%; }
   .hero-copy .button-group { flex-direction: column; align-items: flex-start; }
   .benefits-grid, .testimonials-grid, .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .benefit { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; }
+  /* Each card row shares icon, heading and description tracks through subgrid. */
+  .benefits-grid { grid-template-rows: repeat(2, auto auto auto); }
+  .benefit { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; min-width: 0; }
+  .benefit > .feature-icon { grid-row: 1; }
+  .benefit > h3 { grid-row: 2; }
+  .benefit > p { grid-row: 3; }
   .about-grid { grid-template-columns: .9fr 1.1fr; gap: 32px; }
   .about-image { align-self: start; }
   .contact-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -218,7 +223,7 @@ textarea { resize: vertical; min-height: 128px; }
   .hero-grid { grid-template-columns: 1.1fr 1fr; gap: 64px; }
   .hero-image { max-height: 640px; }
   .hero-copy .button-group { flex-direction: row; }
-  .benefits-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .benefits-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: auto auto auto; gap: 32px; }
   .benefit p, .process-grid p { font-size: 16px; }
   .testimonial { padding: 48px; }
   .about-grid { grid-template-columns: 1fr 1.1fr; gap: 64px; }
