@@ -35,7 +35,7 @@ if (header && menuButton && navigation) {
   });
 }
 
-// The home and treatments pages are available. Explain future links
+// The home, treatments and about pages are available. Explain future links
 // instead of creating empty content pages or taking the visitor to a 404.
 const previewDialog = document.querySelector(".preview-dialog");
 const previewTitle = document.querySelector("#preview-dialog-title");
@@ -49,7 +49,7 @@ document.querySelectorAll("[data-pending]").forEach((link) => {
     previewTitle.textContent = `${link.dataset.pending} – később készül el`;
     previewText.textContent = link.dataset.pending === "Adatkezelési tájékoztató"
       ? "Az adatkezelési tájékoztató szövege később, a kurzus sablonjából kerül hozzáadásra. Az űrlap ebben az előnézetben inaktív."
-      : "Ebben a vizuális változatban a Főoldal és a Kezelések oldal készült el. A Rólunk és a Kapcsolat oldal a következő megvalósítási lépésekben készül el.";
+      : "Ebben a vizuális változatban a Főoldal, a Kezelések és a Rólunk oldal készült el. A Kapcsolat oldal egy következő megvalósítási lépésben készül el.";
     previewDialog.showModal();
   });
 });

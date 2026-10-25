@@ -275,6 +275,42 @@ textarea { resize: vertical; min-height: 128px; }
   .package-price { font-size: 44px; }
 }
 
+/* About page. */
+.story-grid { display: grid; gap: var(--space-6); }
+.story-copy { max-width: 680px; }
+.story-copy > h2 { margin-bottom: var(--space-3); }
+.story-copy > p:not(.kicker) { color: var(--muted); }
+.story-timeline { list-style: none; border-left: 1px solid var(--line); padding-left: var(--space-4); }
+.story-timeline li { position: relative; padding-bottom: var(--space-4); }
+.story-timeline li:last-child { padding-bottom: 0; }
+.story-timeline li::before { content: ""; position: absolute; left: -37px; top: 12px; width: 8px; height: 8px; border-radius: 50%; background: var(--rose); }
+.milestone-year { display: block; margin-bottom: var(--space-2); color: var(--rose); font: 500 40px/1.1 var(--font-heading); }
+.credentials-grid { display: grid; gap: var(--space-3); margin-top: var(--space-8); list-style: none; }
+.credentials-grid li { padding-top: var(--space-3); border-top: 1px solid var(--line); color: var(--rose); font: 600 24px/1.2 var(--font-heading); }
+.values-section { background: var(--powder); }
+.values-grid { display: grid; gap: var(--space-3); }
+.value-card { min-width: 0; padding: var(--space-4); border-radius: 16px; background: var(--cream); }
+.value-number { display: block; margin-bottom: var(--space-3); }
+.value-card p { margin-top: var(--space-2); color: var(--muted); }
+.salon-caption { margin-top: var(--space-2); font-size: 14px; line-height: 1.5; color: var(--muted); }
+.salon-copy > h2 { margin-bottom: var(--space-3); }
+.salon-copy > p:not(.kicker) { color: var(--muted); }
+
+@media (min-width: 768px) {
+  .credentials-grid, .values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .value-card:last-child { grid-column: 1 / -1; width: calc((100% - 24px) / 2); justify-self: center; }
+  .salon-caption { font-size: 15px; }
+}
+
+@media (min-width: 1024px) {
+  .story-grid { grid-template-columns: 1.5fr .8fr; gap: var(--space-12); align-items: start; }
+  .credentials-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .credentials-grid li { font-size: 28px; }
+  .values-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .value-card { grid-column: span 2; }
+  .value-card:nth-child(4), .value-card:last-child { grid-column: span 3; width: auto; justify-self: stretch; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }

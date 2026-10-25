@@ -48,3 +48,21 @@ Csak kivágás és aránytartó, Lanczos átméretezés történt, retusálás, 
 A két legnagyobb webes változat együtt 204 922 bájt, körülbelül 200 KiB. A kisebb változatokat a böngésző a nézet és a képpontsűrűség alapján választhatja. Egyetlen webes változat sem szélesebb 1200 px-nél. Az eredeti, teljes felbontású JPG-k archivált forrásanyagok; az oldal HTML-je nem hivatkozik rájuk, így az oldal megnyitása nem tölti le őket.
 
 A Pexels licenc megengedi a képek ingyenes webes felhasználását és módosítását, a licenc korlátozásainak betartásával. A képeken szereplő személyek nem jelennek meg Eliza szolgáltatásainak ajánlójaként. A fenti forráshivatkozásokat a projekt dokumentálásához megőrizzük.
+
+## 3. Rólunk – szalonhangulat
+
+- **Helye:** Rólunk oldal, „Ezt kapod az Eliza Beauty Salonban” szakasz.
+- **Fotós:** Daniel & Hannah Snipes (a Pexels-oldalon feltüntetett név).
+- **Pontos forrásoldal:** [Modern Spa Treatment Room with Minimalist Decor](https://www.pexels.com/photo/modern-spa-treatment-room-with-minimalist-decor-34220297/).
+- **Letöltés és licencellenőrzés dátuma:** 2026-10-25.
+- **Felhasználási feltételek:** [Pexels License](https://www.pexels.com/license/).
+- **Eredeti letöltési hivatkozás:** https://images.pexels.com/photos/34220297/pexels-photo-34220297.jpeg?cs=srgb&dl=pexels-prolificpeople-34220297.jpg&fm=jpg
+- **Megőrzött eredeti:** `assets/images/originals/vilagos-kezeloter-daniel-hannah-snipes-34220297.jpg`, 4480 × 6720 px. Az oldal nem tölti be az eredeti JPG-t.
+- **Kivágás:** bal/felső/jobb/alsó: 2650 / 1900 / 4250 / 3900 px, azaz 1600 × 2000 px, 4:5 képarány. A kivágás a világos kezelőágyra, puha textilekre és púderes környezetre összpontosít, a termékpolc és a párna apró felirata nem szerepel rajta.
+- **Webes fájlok:** `vilagos-kezeloter-hangulat-480.webp` (480 × 600 px, 15 548 bájt), `vilagos-kezeloter-hangulat-800.webp` (800 × 1000 px, 108 376 bájt), `vilagos-kezeloter-hangulat-1200.webp` (1200 × 1500 px, 410 458 bájt), az `assets/images/` mappában.
+- **Feldolgozás:** aránytartó Lanczos átméretezés, WebP 82-es minőség, method 6. Nem történt retusálás, generatív módosítás vagy színezés.
+- **Betöltés:** `picture`, `srcset`, a rácshoz igazodó `sizes`, `loading="lazy"`, `decoding="async"`.
+- **Alt:** „Az Eliza Beauty Salon nyugodt hangulatát idéző világos kezelőtér.”
+- **Látható képaláírás:** „Hangulatkép; nem a szalon tényleges helyszínét ábrázolja.”
+
+A fotó kizárólag hangulati illusztráció; nem Eliza valódi szalonját dokumentálja, és nem sugallja a képkészítő együttműködését vagy ajánlását.
