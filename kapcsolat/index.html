@@ -62,17 +62,21 @@
           <div class="contact-page-hours"><h3>Nyitvatartás</h3><p>H–P: 9:00–16:00<br>Szo–V: zárva</p><p class="confirmation-note">Kizárólag előre egyeztetett időpontban.</p></div>
         </div>
         <div class="form-card contact-page-form" id="idopontkeres" tabindex="-1">
-          <p class="preview-note" id="form-preview-note"><strong>Vizuális előnézet</strong>Az űrlap jelenleg előnézet, még nem küld adatot.</p>
-          <form aria-label="Kapcsolati és időpontkérő űrlap – inaktív előnézet" aria-describedby="form-preview-note" data-preview-form>
-            <fieldset disabled>
-              <legend class="sr-only">Kapcsolatfelvétel – a mezők ebben az előnézetben inaktívak</legend>
-              <label for="full-name">Teljes név</label><input id="full-name" type="text" autocomplete="name">
-              <label for="email">E-mail cím</label><input id="email" type="email" autocomplete="email">
-              <label for="message">Üzenet</label><textarea id="message" rows="4"></textarea>
-              <button class="button button-primary" type="submit" disabled>Küldés <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+          <form name="idopontkeres" method="POST" action="/koszonjuk/" data-netlify="true" netlify-honeypot="bot-field" aria-label="Kapcsolati és időpontkérő űrlap">
+            <input type="hidden" name="form-name" value="idopontkeres">
+            <p hidden><label>Hagyd üresen ezt a mezőt: <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label></p>
+            <fieldset>
+              <legend class="sr-only">Kapcsolatfelvétel és időpontkérés</legend>
+              <label for="full-name">Teljes név</label><input id="full-name" name="name" type="text" autocomplete="name" required>
+              <label for="email">E-mail cím</label><input id="email" name="email" type="email" autocomplete="email" required>
+              <label for="message">Üzenet</label><textarea id="message" name="message" rows="4" required></textarea>
+              <div class="consent-field">
+                <input id="privacy-consent" name="adatkezeles" type="checkbox" value="elfogadva" required>
+                <label for="privacy-consent">Az <a href="/adatkezeles/">Adatkezelési tájékoztató</a> megismerése után hozzájárulok a nevem, e-mail-címem és üzenetem kezeléséhez a megkeresésem megválaszolása és az időpont egyeztetése céljából.</label>
+              </div>
+              <button class="button button-primary" type="submit">Küldés <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
             </fieldset>
           </form>
-          <p class="small-text privacy-note"><a href="../adatkezeles/">Adatkezelési tájékoztató</a></p>
         </div>
       </div>
     </section>
@@ -101,7 +105,7 @@
       <nav aria-label="Lábléc navigáció"><h2 class="footer-heading">Oldalak</h2><ul><li><a href="../">Főoldal</a></li><li><a href="../kezelesek/">Kezelések</a></li><li><a href="../rolunk/">Rólunk</a></li><li><a href="./" aria-current="page">Kapcsolat</a></li></ul></nav>
     </div>
     <div class="container footer-bottom"><p>© Eliza Beauty Salon – Minden jog fenntartva!</p><a href="../adatkezeles/">Adatkezelési tájékoztató</a></div>
-    <p class="container preview-footer-note">Első vizuális változat. A telefonszám és az e-mail a kapott alapanyag mintaadata; az űrlap még inaktív.</p>
+    <p class="container preview-footer-note">Első vizuális változat. A telefonszám és az e-mail a kapott alapanyag mintaadata.</p>
   </footer>
 
 </body>

@@ -326,6 +326,10 @@ textarea { resize: vertical; min-height: 128px; }
   .contact-detail-label { font-size: 15px; }
 }
 
+.contact-page-form .consent-field { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px; align-items: start; margin-bottom: var(--space-3); }
+.contact-page-form .consent-field input { width: 20px; height: 20px; padding: 0; margin: 3px 0 0; accent-color: var(--rose); }
+.contact-page-form .consent-field label { margin: 0; line-height: 1.5; }
+
 /* Privacy notice: readable prose, local typography, shared navigation. */
 .privacy-content { max-width: 800px; }
 .privacy-heading { margin-bottom: var(--space-4); }

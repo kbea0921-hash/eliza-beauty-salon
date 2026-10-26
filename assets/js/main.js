@@ -34,8 +34,3 @@ if (header && menuButton && navigation) {
     setMenuOpen(false, !desktop.matches && focusWasInNav);
   });
 }
-
-// No network request, persistence, or simulated success in the visual preview.
-document.querySelector("[data-preview-form]")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-});
