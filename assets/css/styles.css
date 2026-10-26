@@ -311,6 +311,26 @@ textarea { resize: vertical; min-height: 128px; }
   .value-card:nth-child(4), .value-card:last-child { grid-column: span 3; width: auto; justify-self: stretch; }
 }
 
+/* Contact page: one form, contact details precede it on small screens. */
+.contact-page-grid { display: grid; gap: var(--space-6); grid-template-areas: "intro" "details" "form"; }
+.contact-page-intro { grid-area: intro; min-width: 0; }
+.contact-page-intro > p { margin-top: var(--space-3); color: var(--muted); }
+.contact-page-details { grid-area: details; min-width: 0; padding: var(--space-4); background: var(--powder); border-radius: 16px; }
+.contact-page-details h2 { margin-bottom: var(--space-4); }
+.contact-page-details address p + p { margin-top: var(--space-3); }
+.contact-detail-label { display: block; margin-bottom: 8px; color: var(--muted); font-size: 14px; }
+.contact-page-details a { overflow-wrap: anywhere; text-underline-offset: 4px; }
+.contact-page-phone { font: 500 28px/1.2 var(--font-heading); text-decoration: none; }
+.contact-page-hours { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--line); }
+.contact-page-hours h3 { margin-bottom: var(--space-2); }
+.contact-page-form { grid-area: form; min-width: 0; background: var(--powder); }
+@media (min-width: 1024px) {
+  .contact-page-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); grid-template-areas: "intro details" "form details"; column-gap: var(--space-8); row-gap: var(--space-4); align-items: start; }
+  .contact-page-details { padding: var(--space-6); }
+  .contact-page-phone { font-size: 36px; }
+  .contact-detail-label { font-size: 15px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
