@@ -35,22 +35,6 @@ if (header && menuButton && navigation) {
   });
 }
 
-// All four main pages are available; only the privacy notice is pending.
-const previewDialog = document.querySelector(".preview-dialog");
-const previewTitle = document.querySelector("#preview-dialog-title");
-const previewText = document.querySelector("#preview-dialog-text");
-
-document.querySelectorAll("[data-pending]").forEach((link) => {
-  link.setAttribute("aria-haspopup", "dialog");
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (!previewDialog || !previewTitle || !previewText) return;
-    previewTitle.textContent = `${link.dataset.pending} – később készül el`;
-    previewText.textContent = "Az adatkezelési tájékoztató szövege később, a kurzus sablonjából kerül hozzáadásra. Az űrlap ebben az előnézetben inaktív.";
-    previewDialog.showModal();
-  });
-});
-
 // No network request, persistence, or simulated success in the visual preview.
 document.querySelector("[data-preview-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
